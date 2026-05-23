@@ -35,11 +35,15 @@ export default function ListingCard({ listing }) {
     <div className="bg-white rounded-2xl shadow overflow-hidden border border-gray-100 hover:shadow-lg transition">
 
       {/* ✅ Listing Image */}
-      <img
-        src={listing.image || "https://via.placeholder.com/400"}
-        alt={listing.name || listing.title}
-        className="w-full h-52 object-cover"
-      />
+     <img
+  src={
+    listing.image
+      ? `https://pg-backend-9xs4.onrender.com/uploads/${listing.image}`
+      : "https://via.placeholder.com/400"
+  }
+  alt={listing.name || listing.title}
+  className="w-full h-52 object-cover"
+/>
 
       {/* ✅ Content */}
       <div className="p-4">
